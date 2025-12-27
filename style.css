@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.spotify {
+  width: 850px;
+}
+
+.spotify h2 {
+  margin-bottom: 20px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 50px 1fr 200px 80px;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.song {
+  display: grid;
+  grid-template-columns: 50px 1fr 200px 80px;
+  align-items: center;
+  padding: 12px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.song:hover {
+  background: #1a1a1a;
+}
+
+/* hide radio */
+.song input {
+  display: none;
+}
+
+.num {
+  color: #aaa;
+}
+
+/* title + image */
+.title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.title img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.title strong {
+  font-size: 15px;
+}
+
+.title p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.album, .time {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* active song */
+.song input:checked ~ .num {
+  color: #1db954;
+}
+
+.song input:checked ~ .title strong {
+  color: #1db954;
+}
